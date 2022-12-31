@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Function;
+
 /*
  * This file is part of the SolidWorx Lodash-PHP project.
  *
@@ -28,7 +30,7 @@ class OverArgsTest extends TestCase
 
         $func = overArgs(function ($x, $y) {
             return [$x, $y];
-        }, ['square', 'doubled']);
+        }, [square(...), doubled(...)]);
 
         $this->assertSame([81, 6], $func(9, 3));
 

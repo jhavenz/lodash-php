@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\String;
+
 /*
  * This file is part of the SolidWorx Lodash-PHP project.
  *

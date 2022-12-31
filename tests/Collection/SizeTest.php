@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Collection;
+
 /*
  * This file is part of the SolidWorx Lodash-PHP project.
  *
@@ -26,7 +28,7 @@ class SizeTest extends TestCase
         }));
 
         $this->assertSame(12, size(new class implements \Countable {
-            public function count()
+            public function count(): int
             {
                 return 12;
             }

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Lang;
+
 /*
  * This file is part of the SolidWorx Lodash-PHP project.
  *
@@ -32,9 +34,9 @@ class IsEqualTest extends TestCase
 
     public function notEqualValues()
     {
-        $ob1 = new StdClass();
+        $ob1 = new \stdClass();
         $ob1->a = 'b';
-        $ob2 = new StdClass();
+        $ob2 = new \stdClass();
 
         return [
             [
@@ -53,17 +55,17 @@ class IsEqualTest extends TestCase
                 $ob1, $ob2,
             ],
             [
-                new DateTime('NOW'), new DateTime('NOW'),
+                new \DateTime(), new \DateTime(),
             ],
         ];
     }
 
     public function equalValues()
     {
-        $ob1 = new StdClass();
-        $ob2 = new StdClass();
+        $ob1 = new \stdClass();
+        $ob2 = new \stdClass();
 
-        $date = new DateTime('NOW');
+        $date = new \DateTime();
 
         return [
             [

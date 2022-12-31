@@ -47,7 +47,7 @@ function property($path): callable
         $path = \implode('.', (array) $path);
 
         if (\is_array($value)) {
-            if (false !== \strpos($path, '.')) {
+            if (str_contains($path, '.')) {
                 $paths = \explode('.', $path);
 
                 foreach ($paths as $path) {

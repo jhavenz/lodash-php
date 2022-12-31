@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/7.3/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
          colors="true"
          bootstrap="vendor/autoload.php"
+         stopOnFailure="true"
 >
     <php>
         <ini name="error_reporting" value="-1"/>
@@ -15,13 +15,10 @@
         </testsuite>
     </testsuites>
 
-    <filter>
-        <whitelist>
-            <directory>src</directory>
-            <exclude>
-                <directory>src/internal</directory>
-                <file>src/bootstrap.php</file>
-            </exclude>
-        </whitelist>
-    </filter>
+    <coverage>
+        <exclude>
+            <directory>src/internal</directory>
+            <file>src/bootstrap.php</file>
+        </exclude>
+    </coverage>
 </phpunit>

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Tests\Object;
+
 /*
  * This file is part of the SolidWorx Lodash-PHP project.
  *
